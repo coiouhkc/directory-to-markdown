@@ -63,6 +63,8 @@ def directory_to_markdown(
             # Remove ignored directories from traversal
             dirs[:] = [d for d in dirs if d not in ignore_dirs]
 
+            md.write(f"[toc]\n\n")
+
             for filename in files:
                 file_path = root_path / filename
 
